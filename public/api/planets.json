@@ -1,0 +1,32 @@
+{
+    "planets": [
+        {
+            "id": "Mercury",
+            "name": "Mercúrio",
+            "description": "Finge que tem alguma coisa aqui",
+            "img_url": "https://veja.abril.com.br/wp-content/uploads/2016/05/alx_vista_de_mercurio_original5.jpeg?quality=70&strip=info&w=1280&h=720&crop=1",
+            "link": "https://google.com"
+        },
+        {
+            "id": "Pluto",
+            "name": "Plutão",
+            "description": "Finge que tem alguma coisa aqui 2",
+            "img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pluto_in_True_Color_-_High-Res.jpg/800px-Pluto_in_True_Color_-_High-Res.jpg",
+            "link": "https://www.habbo.com.br"
+        },
+        {
+            "id": "Uranus",
+            "name": "Urano",
+            "description": "Finge que tem alguma coisa aqui 3",
+            "img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Uranus2.jpg/420px-Uranus2.jpg",
+            "link": "https://www.habbo.com.br"
+        },
+        {
+            "id": "Mars",
+            "name": "Marte",
+            "description": "Finge que tem alguma coisa aqui 4",
+            "img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/OSIRIS_Mars_true_color.jpg/420px-OSIRIS_Mars_true_color.jpg",
+            "link": "https://www.habbo.com.br"
+        }
+    ]
+}

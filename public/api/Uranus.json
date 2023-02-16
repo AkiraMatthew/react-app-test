@@ -1,0 +1,17 @@
+{
+    "id": "Uranus",
+    "satellites": [
+        {
+            "id": 1,
+            "name": "Uranus Satellite 1"
+        },
+        {
+            "id": 2,
+            "name": "Uranus Satellite 2"
+        },
+        {
+            "id": 3,
+            "name": "Uranus Satellite 3"
+        }
+    ]
+}

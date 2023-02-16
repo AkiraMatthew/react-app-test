@@ -1,0 +1,17 @@
+{
+    "id": "Mars",
+    "satellites": [
+        {
+            "id": 1,
+            "name": "Mars Satellite 1"
+        },
+        {
+            "id": 2,
+            "name": "Mars Satellite 2"
+        },
+        {
+            "id": 3,
+            "name": "Mars Satellite 3"
+        }
+    ]
+}
