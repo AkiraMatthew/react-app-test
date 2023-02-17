@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Planet from "./planet";
 
 /*const clickOnPlanet = (name) => {
@@ -23,50 +23,50 @@ async function getPlanets(){
 }*/
 
 const Planets = () => {
-
+    const [planets, setPlanets] = useState([
+        {
+            "id": "Mercury",
+            "name": "Mercúrio",
+            "description": "Finge que tem alguma coisa aqui",
+            "img_url": "https://veja.abril.com.br/wp-content/uploads/2016/05/alx_vista_de_mercurio_original5.jpeg?quality=70&strip=info&w=1280&h=720&crop=1",
+            "link": "https://google.com"
+        }
+    ]);
 
     const removeLast = () => {
-        let new_planets = [...state.planets];
+        let new_planets = [...planets];
         new_planets.pop();
-        setState((state) => {
-            return {planets: new_planets}
-        })
-    }
+        setPlanets(new_planets);
+    };
 
     const lastPlanetDuplicate = () => {
-        const n = state.planets.length - 1
-        let last_planet = state.planets[n]
+        const n = (planets.length - 1);
+        let last_planet = planets[n];
 
-        setState((state) => (
-            {
-                planets: [...state.planets, last_planet]
-            }
-        ))
-    }
+        setPlanets([...planets, last_planet]);
+    };
     
-    render(){
-        return (
-            <Fragment>
-                <h3>Planet List</h3>
-                <button onClick={removeLast}>Remove Last</button>
-                <button onClick={lastPlanetDuplicate}>Duplicate Last</button>
-                <hr/>
-                {state.planets.map((planet, index) =>
-                    <Planet
-                        id={planet.id}
-                        key={index}
-                        name={planet.name}
-                        description={planet.description}
-                        img_url={planet.img_url}
-                        link={planet.link}
-                        //clickOnPlanet={clickOnPlanet}
-                        //title_with_underline={true}
-                        //gray={true}
-                    />
-                )}
-            </Fragment>
-        )
-    }
+    return (
+        <Fragment>
+            <h3>Planet List</h3>
+            <button onClick={removeLast}>Remove Last</button>
+            <button onClick={lastPlanetDuplicate}>Duplicate Last</button>
+            <hr/>
+            {planets.map((planet, index) =>
+                <Planet
+                    id={planet.id}
+                    key={index}
+                    name={planet.name}
+                    description={planet.description}
+                    img_url={planet.img_url}
+                    link={planet.link}
+                    //clickOnPlanet={clickOnPlanet}
+                    //title_with_underline={true}
+                    //gray={true}
+                />
+            )}
+        </Fragment>
+    )
 
 }
 
