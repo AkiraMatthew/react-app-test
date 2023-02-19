@@ -1,5 +1,6 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import Planet from "./planet";
+import Form from "./form";
 
 /*const clickOnPlanet = (name) => {
     console.log(`Um clique no planeta: ${name}`)
@@ -23,34 +24,23 @@ async function getPlanets(){
 }*/
 
 const Planets = () => {
-    const [planets, setPlanets] = useState([
-        {
-            "id": "Mercury",
-            "name": "Mercúrio",
-            "description": "Finge que tem alguma coisa aqui",
-            "img_url": "https://veja.abril.com.br/wp-content/uploads/2016/05/alx_vista_de_mercurio_original5.jpeg?quality=70&strip=info&w=1280&h=720&crop=1",
-            "link": "https://google.com"
-        }
-    ]);
+    const [planets, setPlanets] = useState([]);
 
-    const removeLast = () => {
-        let new_planets = [...planets];
-        new_planets.pop();
-        setPlanets(new_planets);
-    };
-
-    const lastPlanetDuplicate = () => {
-        const n = (planets.length - 1);
-        let last_planet = planets[n];
-
-        setPlanets([...planets, last_planet]);
-    };
+    useEffect(() => {
+        getPlanets().then((data) => {
+            setPlanets(data['planets'])
+        })
+    }, []) //caso o colchetes esteja vazio, significa que o useEffect não irá renderizar nenhum component, caso desejar rendererizar, deve se passar um parâmetro
     
+    const addPlanet = (new_planet) => {
+        setPlanets([...planets, new_planet])
+    }
+
     return (
         <Fragment>
             <h3>Planet List</h3>
-            <button onClick={removeLast}>Remove Last</button>
-            <button onClick={lastPlanetDuplicate}>Duplicate Last</button>
+            <hr/>
+            <Form addPlanet={addPlanet}/>
             <hr/>
             {planets.map((planet, index) =>
                 <Planet
