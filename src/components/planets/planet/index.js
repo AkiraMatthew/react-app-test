@@ -24,20 +24,6 @@ const Planet = (props) => {
     }
     
 
-    /*componentDidMount(){
-        getSatellites(this.props.id).then((data) => {
-            setPlanet(data['satellites'])
-        })
-    }*/
-
-    
-    //const names = ['a', 'b', 'c', 'd']
-    //mapeando pelo js
-    //const satellites = names.map((n) => {
-    //      return <li>Satélite {n}</li>
-    //  })
-    
-
     let title;
     if(props.title_with_underline)
         title = <h4><u>{props.name}</u></h4>

@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Planet from "./planet";
-import Form from "./form";
+import Form from "./form/index"
 
 /*const clickOnPlanet = (name) => {
     console.log(`Um clique no planeta: ${name}`)
@@ -38,10 +38,11 @@ const Planets = () => {
 
     return (
         <Fragment>
+            <h1>dfsdf</h1>
+            <hr/>
             <h3>Planet List</h3>
             <hr/>
             <Form addPlanet={addPlanet}/>
-            <hr/>
             {planets.map((planet, index) =>
                 <Planet
                     id={planet.id}
