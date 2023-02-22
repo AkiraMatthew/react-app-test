@@ -32,14 +32,16 @@ const Planets = () => {
         })
     }, []) //caso o colchetes esteja vazio, significa que o useEffect não irá renderizar nenhum component, caso desejar rendererizar, deve se passar um parâmetro
     
-    const addPlanet = (new_planet) => {
-        setPlanets([...planets, new_planet])
-    }
+    const addPlanet = (newPlanet) => {
+        setPlanets((prevPlanets) => [
+          ...prevPlanets,
+          { id: prevPlanets.length + 1, ...newPlanet, },
+        ]);
+      };
+      
 
     return (
         <Fragment>
-            <h1>dfsdf</h1>
-            <hr/>
             <h3>Planet List</h3>
             <hr/>
             <Form addPlanet={addPlanet}/>
