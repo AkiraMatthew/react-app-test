@@ -2,10 +2,6 @@ import React, { Fragment, useState, useEffect } from "react";
 import Planet from "./planet";
 import Form from "./form/index"
 
-/*const clickOnPlanet = (name) => {
-    console.log(`Um clique no planeta: ${name}`)
-}*/
-
 
 async function getPlanets(){
     let response = await fetch('http://localhost:3000/api/planets.json');
@@ -13,15 +9,6 @@ async function getPlanets(){
     return data
 }
 
-/*componentDidMount(){
-    getPlanets().then((data) => {
-        this.setState((state) => {
-            return {
-                planets: data['planets']
-            }
-        })
-    })
-}*/
 
 const Planets = () => {
     const [planets, setPlanets] = useState([]);
@@ -53,9 +40,6 @@ const Planets = () => {
                     description={planet.description}
                     img_url={planet.img_url}
                     link={planet.link}
-                    //clickOnPlanet={clickOnPlanet}
-                    //title_with_underline={true}
-                    //gray={true}
                 />
             )}
         </Fragment>

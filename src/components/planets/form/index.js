@@ -30,7 +30,7 @@ const Form = (props) => {
                 </div>
                 <div>
                     <label htmlFor="description">Planet description: </label>
-                    <input id="description" name="description" type="text" value={fields.description} onChange={handleFieldsChange}/>
+                    <textarea cols="20" rows="auto" id="description" name="description" type="text" value={fields.description} onChange={handleFieldsChange}></textarea>
                 </div>
                 <div>
                     <label htmlFor="link">Planet link: </label>
@@ -45,6 +45,7 @@ const Form = (props) => {
             </form>
         </Fragment>
     )
+    //<input id="description" name="description" type="text" value={fields.description} onChange={handleFieldsChange}/>
 };
 
 export default Form;
