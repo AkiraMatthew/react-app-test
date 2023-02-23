@@ -1,5 +1,5 @@
 import React from "react";
-import Planets from "../components/planets"
+import Planets from "../planets"
 
 const PlanetsScreen = () => {
     return (

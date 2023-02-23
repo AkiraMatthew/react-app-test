@@ -1,6 +1,7 @@
 import React from "react";
-import PlanetsScreen from "./screens/planets";
+import PlanetsScreen from "./components/screens/planets";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PlanetScreen from "./components/screens/planet";
 
 
 export const Root = () => {
@@ -8,6 +9,7 @@ export const Root = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<PlanetsScreen />} />
+        <Route path="/planet" element={<PlanetScreen />} />
       </Routes>
     </BrowserRouter>
   );
